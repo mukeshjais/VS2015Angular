@@ -1,0 +1,31 @@
+<h1>Artists</h1>
+<table class="table" #tablefield>
+  <tr *ngFor="let artist of artists">
+    <td>
+      <a [routerLink]="['/artists', artist.id]">{{artist.name}}</a>
+    </td>
+  </tr>
+</table>
+
+<input type={{inputType}} [value]="baseAmount" #baseAmountField> USD = 
+<strong #strongfield>{{targetAmount}}</strong> GBP
+<button on-click="update(baseAmountField.value)">Update</button>
+<!--<div>
+  <img [src]="imgSource">
+</div>-->
+<div class="order-option">
+    Quantity:
+    <span id="quantity-field">
+        <input type="text" id="quantity" value="1">
+        <button id="up" onclick="setQuantity('up');">+</button>
+        <button id="down" onclick="setQuantity('down');">-</button>
+    </span>
+</div>
+
+ <input id="spinner" name="value">
+
+<p>
+  <label for="spinner">Select a value:</label>
+  <input id="spinner" class="ui-spinner-input" name="value" autocomplete="off" role="spinbutton" aria-valuenow="0">
+  <input type="number">
+</p>
